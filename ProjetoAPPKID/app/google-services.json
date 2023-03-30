@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "213715673971",
+    "project_id": "appkid-d5c02",
+    "storage_bucket": "appkid-d5c02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213715673971:android:3c664ff5c3bffbf0e7db06",
+        "android_client_info": {
+          "package_name": "com.ftec.kidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213715673971-npj6iq3sgjf021b7gvt57rrj5jpbda7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe0Hv1ffzAZvU2gxzHr7CyIErse26N3Q8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213715673971-npj6iq3sgjf021b7gvt57rrj5jpbda7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213715673971:android:ee39b591823644b2e7db06",
+        "android_client_info": {
+          "package_name": "com.ftec.kidapp.Activity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213715673971-npj6iq3sgjf021b7gvt57rrj5jpbda7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe0Hv1ffzAZvU2gxzHr7CyIErse26N3Q8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213715673971-npj6iq3sgjf021b7gvt57rrj5jpbda7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

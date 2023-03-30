@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.TelaLogin"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"/>
+
+    <EditText
+        android:id="@+id/edtEmail"
+        style="@style/Edit_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/edt_email"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edtSenha"
+        style="@style/Edit_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/edt_senha"
+        android:inputType="textPassword"/>
+    <Button
+        android:id="@+id/btnEntrar"
+        style="@style/botao"
+        android:text="@string/btn_entrar"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"  />
+
+    <Button
+        android:id="@+id/btnCadastro"
+        style="@style/botao"
+        android:text="@string/btn_novo_cada"
+        android:textColor="@color/white"
+        android:layout_marginTop="40dp"  />
+
+
+    <Button
+        android:id="@+id/btnSair"
+        style="@style/botao"
+        android:text="@string/btn_sair"
+        android:textColor="@color/white"
+        android:layout_marginTop="40dp"  />
+</LinearLayout>
