@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/purple_200">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rowCount="2"
+        android:columnCount="3">
+
+        <ImageView
+            android:id="@+id/card1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/carta0"
+            android:tag="0"/>
+
+        <ImageView
+            android:id="@+id/card2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/carta0"
+            android:tag="1"/>
+
+        <ImageView
+            android:id="@+id/card3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/carta0"
+            android:tag="2"/>
+
+        <ImageView
+            android:id="@+id/card4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/carta0"
+            android:tag="3"/>
+
+        <ImageView
+            android:id="@+id/card5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/carta0"
+            android:tag="4"/>
+
+        <ImageView
+            android:id="@+id/card6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/carta0"
+            android:tag="5"/>
+
+        <Button
+            android:id="@+id/new_game_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:onClick="onNewGameButtonClick"
+            android:text="Novo Jogo" />
+        <Button
+            android:id="@+id/salvar_e_fechar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar e Fechar" />
+
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
