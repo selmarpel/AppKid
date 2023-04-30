@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">APPKID</string>
+    <string name="edt_email">Email</string>
+    <string name="edt_senha">Senha</string>
+    <string name="edt_cadEmail">insira seu Email</string>
+    <string name="edt_cadaSenha">insira sua senha</string>
+    <string name="edt_cadIdade">Insira a idade</string>
+    <string name="btn_salvar">Cadastrar</string>
+    <string name="btn_voltar">Voltar</string>
+    <string name="btn_sair">Sair</string>
+    <string name="btn_entrar">entrar</string>
+    <string name="btn_memo">Jogo de memória</string>
+    <string name="btn_memo3">Díficil</string>
+    <string name="btn_memo2">Médio</string>
+    <string name="btn_memo1">Fácil</string>
+    <string name="btn_auto">Dificuldade automática</string>
+    <string name="btn_voltar2">Voltar</string>
+    <string name="btn_novo_cada">Novo Cadastro</string>
+    <string name="edt_novoNome">Insira o seu nome</string>
+    <string name="edt_tempoUso">Tempo de uso do APP (Minutos)</string>
+</resources>

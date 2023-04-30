@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.TelaDificuldadeMemo"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_auto"
+        style="@style/botao"
+        android:text="@string/btn_auto"
+        android:textColor="@color/white"
+        android:layout_marginTop="110dp"/>
+
+    <Button
+        android:id="@+id/btnFacil"
+        style="@style/botao"
+        android:text="@string/btn_memo1"
+        android:textColor="@color/white"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/btnMedio"
+        style="@style/botao"
+        android:text="@string/btn_memo2"
+        android:textColor="@color/white"
+        android:layout_marginTop="40dp"  />
+
+    <Button
+        android:id="@+id/btnDificil"
+        style="@style/botao"
+        android:text="@string/btn_memo3"
+        android:textColor="@color/white"
+        android:layout_marginTop="40dp"  />
+
+
+    <Button
+        android:id="@+id/btn_voltar2"
+        style="@style/botao"
+        android:text="@string/btn_voltar2"
+        android:textColor="@color/white"
+        android:layout_marginTop="100dp"  />
+
+</LinearLayout>
