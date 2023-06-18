@@ -10,5 +10,8 @@
     <color name="azul_claro">#ADD8E6</color>
     <color name="vermelho">#FF0000</color>
     <color name="verde">#008000</color>
+    <color name="verdeClaro">#00FF00</color>
+    <color name="amarelo">#FFD700</color>
+    <color name="rosa">#FFC0CB</color>
 
 </resources>

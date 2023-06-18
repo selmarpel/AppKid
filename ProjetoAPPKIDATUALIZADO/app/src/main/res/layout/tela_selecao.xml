@@ -33,9 +33,53 @@
       android:textSize="44dp"
       android:textAlignment="center"/>
   <Button
-      android:id="@+id/btnCadastro"
-      style="@style/botao"
+      android:id="@+id/btnjogoMemoria"
       android:text="@string/btn_memo"
-      android:textColor="@color/white"
-      android:layout_marginTop="40dp"  />
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="16dp"
+      android:textColor="@color/black"
+      android:backgroundTint="@color/azul_claro"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+  <Button
+      android:id="@+id/btnhistoria"
+      android:text="Os três porquinhos"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="16dp"
+      android:textColor="@color/black"
+      android:backgroundTint="@color/amarelo"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+  <Button
+      android:id="@+id/btnhistorico"
+      android:text="Historico"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="16dp"
+      android:textColor="@color/black"
+      android:backgroundTint="@color/vermelho"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+  <Button
+      android:id="@+id/btnSair"
+      android:text="Sair"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="16dp"
+      android:textColor="@color/black"
+      android:backgroundTint="@color/purple_200"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+
 </LinearLayout>

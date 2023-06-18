@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.AudioAttributes;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,11 +23,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
-import com.google.firebase.database.collection.LLRBNode;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import org.w3c.dom.Document;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -36,6 +35,10 @@ public class TelaCadastro extends AppCompatActivity {
     private Button btn_cadastrar, btn_voltar;
     String[]mensagens = {"Preencha todos os campos","Cadastro realizado com sucesso"};
     String usuarioID;
+    private SoundPool soundPool;
+    private int soundId;
+    private boolean isSoundLoaded = false;
+    private final float volume = 0.3f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,9 @@ public class TelaCadastro extends AppCompatActivity {
         setContentView(R.layout.tela_cadastro);
         getSupportActionBar().hide();
         IniciarComponentes();
+        setupSoundPool();
+        loadSound();
+
         //Botão Voltar
         btn_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +78,10 @@ public class TelaCadastro extends AppCompatActivity {
         });
 
     }
-            private void CadastrarUsuario(View v){
+
+
+
+    private void CadastrarUsuario(View v){
                 String email = edt_email.getText(). toString();
                 String senha = edt_senha.getText().toString();
                 FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -138,5 +147,69 @@ public class TelaCadastro extends AppCompatActivity {
         btn_cadastrar =findViewById(R.id.btn_cadastrar);
         btn_voltar = findViewById(R.id.btn_voltar);
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (isSoundLoaded) {
+            soundPool.play(soundId, volume, volume, 1, -1, 1.0f);
+        }
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        stopSound();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        releaseSoundPool();
+    }
+
+    private void setupSoundPool() {
+        AudioAttributes attributes = new AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_GAME)
+                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                .build();
+        soundPool = new SoundPool.Builder()
+                .setMaxStreams(1)
+                .setAudioAttributes(attributes)
+                .build();
+    }
+
+    private void loadSound() {
+        soundPool.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
+            @Override
+            public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
+                if (status == 0) {
+                    isSoundLoaded = true;
+                    soundId = sampleId;
+                    playSound();
+                }
+            }
+        });
+
+        // Carregue seu arquivo de som aqui
+        soundId = soundPool.load(this, R.raw.som1, 1);
+    }
+
+    private void playSound() {
+        if (isSoundLoaded) {
+            soundPool.play(soundId, volume, volume, 1, -1, 1.0f);
+        }
+    }
+
+    private void stopSound() {
+        if (isSoundLoaded) {
+            soundPool.stop(soundId);
+        }
+    }
+
+    private void releaseSoundPool() {
+        if (soundPool != null) {
+            soundPool.release();
+            soundPool = null;
+        }
+    }
 }

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
         android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,21 +16,60 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.KIDAPP"
-        tools:targetApi="31" >
+        tools:targetApi="31">
         <activity
-            android:name=".TesteIdade"
+            android:name=".Activity.TelaHistorico"
             android:exported="false" />
         <activity
-            android:name=".Activity.TelaMemoria1"
+            android:name=".Activity.TelaRanking"
             android:exported="false" />
         <activity
-            android:name=".Activity.TelaMemoria2"
+            android:name="historia_3_porquinhos.pg11"
+            android:exported="false" />
+        <activity
+            android:name="historia_3_porquinhos.pg10"
+            android:exported="false" />
+        <activity
+            android:name="historia_3_porquinhos.pg9"
+            android:exported="false" />
+        <activity
+            android:name="historia_3_porquinhos.pg8"
+            android:exported="false" />
+        <activity
+            android:name="historia_3_porquinhos.pg7"
+            android:exported="false" />
+        <activity
+            android:name="historia_3_porquinhos.pg6"
+            android:exported="false" />
+        <activity
+            android:name="historia_3_porquinhos.pg5"
+            android:exported="false" />
+        <activity
+            android:name="historia_3_porquinhos.pg4"
+            android:exported="false" />
+        <activity
+            android:name="historia_3_porquinhos.pg3"
+            android:exported="false" />
+        <activity
+            android:name="historia_3_porquinhos.pg2"
+            android:exported="false" />
+        <activity
+            android:name="historia_3_porquinhos.pg1"
+            android:exported="false" />
+        <activity
+            android:name="historia_3_porquinhos.capa"
+            android:exported="false" />
+        <activity
+            android:name="jogo.TelaMemoria1"
+            android:exported="false" />
+        <activity
+            android:name="jogo.TelaMemoria2"
             android:exported="false" />
         <activity
             android:name=".Activity.TelaDificuldadeMemo"
             android:exported="false" />
         <activity
-            android:name=".Activity.TelaMemoria3"
+            android:name="jogo.TelaMemoria3"
             android:exported="false" />
         <activity
             android:name=".Activity.TelaSelecao"
@@ -39,7 +79,7 @@
             android:exported="false" />
         <activity
             android:name=".Activity.TelaLogin"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

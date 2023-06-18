@@ -5,36 +5,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.TelaMemoria2"
-    android:background="@color/purple_200">
+    tools:context="jogo.TelaMemoria2"
+    android:background="@color/white">
 
-    <LinearLayout
+    <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rankingRecyclerView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
         <TextView
-            android:id="@+id/timer"
+            android:id="@+id/timer2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:text="00:00"
-            android:layout_gravity="center_horizontal"/>
-    </LinearLayout>
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
     <GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:background="@drawable/logo"
+        android:layout_width="280dp"
+        android:layout_height="210dp"
         android:rowCount="4"
         android:columnCount="4"
-        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintDimensionRatio="2:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="220dp"
         android:layout_marginBottom="60dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        >
+        android:layout_marginRight="60dp">
 
         <ImageView
             android:id="@+id/card1"
@@ -139,43 +147,53 @@
         android:id="@+id/gridLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="580dp"
         android:columnCount="1"
         android:rowCount="4"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-
             android:id="@+id/load_game_button"
+            android:text="Continuar último jogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
-            android:text="Continuar último jogo" />
+            android:layout_marginTop="1dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/azul_claro"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
-
             android:id="@+id/new_game_button"
+            android:text="Novo Jogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:onClick="onNewGameButtonClick"
-            android:text="Novo Jogo" />
+            android:layout_marginTop="1dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/verdeClaro"
+            app:layout_constraintTop_toBottomOf="@id/load_game_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
-
             android:id="@+id/salvar_e_fechar_button"
+            android:text="Salvar e Voltar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:text="Salvar e Voltar" />
+            android:layout_marginTop="1dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/purple_200"
+            app:layout_constraintTop_toBottomOf="@id/new_game_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
     </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

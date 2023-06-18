@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Activity.TelaRanking">
+
+
+    <TextView
+        android:id="@+id/txtTempoTotalFacil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tempo de uso - Fácil"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/txtTempoTotalMedio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tempo de uso - Médio"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/txtTempoTotalDificil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tempo de uso - Difícil"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+
+    <Button
+        android:id="@+id/btn_voltar3"
+        android:text="Voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/amarelo"/>
+
+</LinearLayout>
